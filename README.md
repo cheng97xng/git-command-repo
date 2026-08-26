@@ -6,13 +6,13 @@ Keeping the git command line that we usually use to manage coding
 
 - Reffer Documentation [Click Here](https://www.w3schools.com/git)
 
-## List the git versions
+## 1. List the git versions
 
 ```bash
 git --version
 ```
 
-## Initialize the git
+## 2. Initialize the git
 
 ```bash
 git config --global --list # list all git caches
@@ -20,19 +20,19 @@ git config --global user.name "<git_username>" # login into git by username
 git config --global user.email "<git_email>" # login into git by email
 ```
 
-## Enable git configuration
+## 3. Enable git configuration
 
 ```bash
 git init
 ```
 
-## See the git status
+## 4. See the git status
 
 ```bash
 git status
 ```
 
-## Git Add
+## 5. Git Add
 
 ```bash
 git add ex1.ts ex2.ts # Add single file
@@ -40,7 +40,7 @@ git add ex1.ts ex2.ts # Add single file
 git add . # Add all files
 ```
 
-## Hold files, but need to reuse it on the feature (No commit changes)
+## 6. Hold files, but need to reuse it on the feature (No commit changes)
 
 - Use git stash to hidden files there are not complete yet, But need to switch to another branch
 
@@ -52,13 +52,13 @@ git stash pop # Reuse the files that were stash or hidden
 #
 ```
 
-## git commit
+## 7. git commit
 
 ```bash
 git commit -m "<description of comments>"
 ```
 
-## Add clould git remote URL info locally
+## 8. Add clould git remote URL info locally
 
 ```bash
 git remote add origin <https://github.com/ower_repository.git>
@@ -66,7 +66,7 @@ git branch -M main # set branch as main
 git push -uf origin <main> # push to main branch on server side as first commit
 ```
 
-## Push directory to git repository
+## 9. Push directory to git repository
 
 ```bash
 git push origin <branch-name>
@@ -75,20 +75,20 @@ git push # Only main branch
 git push origin <branch-name> --force
 ```
 
-## Pull coding from git repository
+## 10. Pull coding from git repository
 
 ```bash
 git pull origin <branch-name>
 git pull # Only main branch
 ```
 
-## Clean repository when pulling
+## 11. Clean repository when pulling
 
 ```bash
 git pull origin <branch_name> --prune
 ```
 
-## Create a new branch
+## 12. Create a new branch
 
 ```bash
 git branch <branch-name>
@@ -98,7 +98,7 @@ git branch switch -c <branch_name> # Create new branch and switch to
 git checkout -b <branch_name>
 ```
 
-## Rename a branch
+## 13. Rename a branch
 
 ```bash
 git branch -m <old_branch> <new_branch>
@@ -106,7 +106,7 @@ git branch -m <old_branch> <new_branch>
 git branch -m branch-a branch-b
 ```
 
-## Switch to a new branch
+## 14. Switch to a new branch
 
 ```bash
 git switch <branch_name>
@@ -114,7 +114,7 @@ git switch <branch_name>
 git checkout <branch_name>
 ```
 
-## Merege branch
+## 15. Merege branch
 
 ```bash
 git merge <branch_a>
@@ -123,7 +123,7 @@ git switch branch-a
 git merge branch-b
 ```
 
-## Delete a branch
+## 16. Delete a branch
 
 ```bash
 git branch -d <branch_name>
@@ -131,19 +131,19 @@ git branch -d <branch_name>
 git branch -D <branch_name>
 ```
 
-## Refresh when a branch is updated
+## 17. Refresh when a branch is updated
 
 ```bash
 git fetch
 ```
 
-## Cleanup or Refresh branches when were we delete on git server
+## 18. Cleanup or Refresh branches when were we delete on git server
 
 ```bash
 git fetch --all --prune
 ```
 
-## Tags version
+## 19. Tags version
 
 ```bash
 git tag <version>
@@ -151,7 +151,7 @@ git tag <version>
 git tag v1.0.0
 ```
 
-## Git Rollback and cleanup squashed
+## 20. Git Rollback and cleanup squashed
 1. Undo the Last Commit but Keep Changes (Soft Reset)
 ```bash
 git reset --soft HEAD~1
@@ -164,32 +164,32 @@ git reset --hard ce34ds
 ```
 **Note:** This will remove all changes from both your working directory and staging area, so only use it if you’re sure you don’t need the changes from that commit.
 
-## Add Origin URL to repository
+## 21. Add Origin URL to repository
 
 ```bash
 git remote add origin <git-url>
 ```
 
-## Remove URL from local repository
+## 22. Remove URL from local repository
 
 ```bash
 git remote remove origin
 ```
 
-## When .gitignore is not working that way to resolve
+## 23. When .gitignore is not working that way to resolve
 
 ```bash
 git reflogprune
 git prune
 ```
 
-## Verify remote URL
+## 24. Verify remote URL
 
 ```bash
 git remote -v
 ```
 
-### Change or Update Remote URL
+### 25. Change or Update Remote URL
 
 - Refer [Click Here](https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories)
 
@@ -199,7 +199,7 @@ git remote set-url origin https://github.com/<OWNER>/<REPOSITORY>.git
 git remote set-url origin https://github.com/OWNER/REPOSITORY.git
 ```
 
-## Monitor repository log
+## 26. Monitor repository log
 
 ```bash
 git log # monitoring log only
@@ -208,7 +208,7 @@ git log --oneline --graph # monitoring log with one line and graph
 git log --oneline --graph --all # monitoring log with one line and all graph
 ```
 
-## To generate an SSH key on your MacBook for use with GitLab for remote
+## 27. To generate an SSH key on your MacBook for use with GitLab for remote
 - follow these steps
 1. Check for Existing SSH Keys
 - Before creating a new key, see if you already have one. Open your terminal and run:
@@ -229,7 +229,7 @@ cat ~/.ssh/id_rsa.pub
 ```
 Then select and copy the key from the terminal to gitlab ssh, after this step you can manage gitLab from local machine
 
-## Git CI/CD
+## 28. Git CI/CD
 - set name as `.gitlab-ci.yml`. Example as below
 ```bash
 stages:
