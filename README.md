@@ -218,6 +218,8 @@ ls -al ~/.ssh
 If files like id_rsa or id_ed25519 (and their .pub versions) exist, you might already have SSH keys. If you want to use these keys, skip to Step 4.
 2. Generate a New SSH Key
 ```bash
+ssh-keygen
+# or
 ssh-keygen -t ed25519 -C "your-email@example.com"
 ```
 4. Copy the SSH Public Key
