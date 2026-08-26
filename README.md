@@ -208,7 +208,7 @@ git log --oneline --graph # monitoring log with one line and graph
 git log --oneline --graph --all # monitoring log with one line and all graph
 ```
 
-## To generate an SSH key on your MacBook for use with GitLab
+## To generate an SSH key on your MacBook for use with GitLab for remote
 - follow these steps
 1. Check for Existing SSH Keys
 - Before creating a new key, see if you already have one. Open your terminal and run:
@@ -227,7 +227,7 @@ Copy the contents of your public key file to the clipboard:
 ```bash
 cat ~/.ssh/id_rsa.pub
 ```
-Then select and copy the key from the terminal to gitlab ssh
+Then select and copy the key from the terminal to gitlab ssh, after this step you can manage gitLab from local machine
 
 ## Git CI/CD
 - set name as `.gitlab-ci.yml`. Example as below
